@@ -1,0 +1,371 @@
+:root {
+  --main-color: #D8D8D8;
+  background-color: #E8D4FE
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Impact, Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  background-color: var(--main-color);
+  color: white;
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+}
+
+
+#tweetTheFortuneBtn {
+  background-color: var(--main-color);
+  color: black;
+  margin-top: 1em;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 0.5em 1.25em;
+  transition: transform 0.3s ease-in;
+  visibility: hidden;
+}
+#tweetTheFortuneBtn:hover {
+  transform: translateY(-5px);
+}
+.i_nav {
+  font-size: 1em;
+  margin: 0.5em;
+  padding: 1em;
+  transition: all 100ms ease-in-out;
+}
+i:hover {
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.main_header_content {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-items: center;
+}
+
+.header_p {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-items: center;
+  font-size: 20px
+}
+
+.sapien_says {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-items: center;
+  font-size: 20px
+}
+
+.logo {
+  width: 16em;
+  align-self: center;
+}
+
+.petition,
+.question {
+  border: none;
+  font-size: larger;
+  background-color: #D8D8D8;
+  transition: transform 0.5s linear;
+}
+
+i.fas.fa-angle-right {
+  color: black;
+  padding: 0.5em;
+}
+
+button {
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+section {
+  width: 80vw;
+  border-top: black 3px dotted;
+  box-shadow: 0 6px 4px -6px black;
+  border-right: black 3px dotted;
+  border-left: black 3px dotted;
+  margin: auto;
+  margin-top: 5em;
+}
+.classy_words {
+  padding: 1em;
+  text-align: center;
+}
+.classy_words_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fab.fa-twitter:hover,
+.fab.fa-twitter:active {
+  color: #38a1f3;
+}
+.new_quote {
+  text-transform: uppercase;
+  color: black;
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 0.2em 0.5em;
+  box-shadow: 0 0.2rem rgba(164, 0, 0, 0.5);
+}
+.new_quote:active {
+  transform: translate(0, 0.2rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.5);
+}
+.new_quote:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+
+.btn:hover {
+  background-color: rgba(164, 0, 0, 0.1);
+}
+
+button:focus,
+input:focus {
+  outline: none;
+  border-bottom: none;
+}
+.btn {
+  display: inline;
+  transition: all 100ms ease-in-out;
+}
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+form {
+  width: 75%;
+}
+.question {
+  border-bottom: 1px solid black;
+  width: 50vw;
+  position: relative;
+}
+
+.spn {
+  font-size: larger;
+  border-bottom: rgb(0, 0, 0) 1px solid;
+  z-index: 8;
+  cursor: text;
+  position: relative;
+  padding: 1px 2px;
+}
+
+.hide {
+  opacity: 0;
+  position: absolute;
+}
+.question_two {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ptt {
+  position: relative;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.petition {
+  width: 100%;
+}
+
+.question_two:focus,
+.spn:focus {
+  border-bottom: 1px solid var(--main-color);
+}
+
+.underline {
+  position: absolute;
+  height: 2px;
+  background: var(--main-color);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.5s ease-out;
+}
+input:focus ~ .underline {
+  width: 50%;
+  transform: scaleX(1);
+}
+
+input:focus ~ .second {
+  width: 100%;
+}
+input:focus ~ .spn {
+  border-bottom: none;
+}
+input:focus::placeholder {
+  color: var(--main-color);
+}
+.nav_list_item {
+  padding-top: 1rem;
+  background-color: white;
+  color: var(--main-color);
+  height: 90vh;
+}
+.nav_list_item ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-right: 1rem;
+}
+.nav_list_item li {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem;
+  border-radius: 3px;
+}
+.nav_list_item li:hover {
+  background-color: rgba(164, 0, 0, 0.2);
+}
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(70 70 70 / 40%);
+  z-index: 9;
+  display: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.inp_hide {
+  display: none;
+}
+.btn_plus {
+  transform: translateY(-25px);
+  font-size: 1.5rem;
+  padding: 0.5em 1.25em;
+  transition: all 0.3s ease;
+  background-color: #F0B9FF;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 20px;
+  border: 2px solid black;
+  margin-top: 1em;
+}
+.btn_plus:hover {
+  filter: brightness(120%);
+  transform: translateY(-20px);
+}
+
+#reset_btn_placeholder {
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+
+@media (min-width: 785px) {
+  form {
+    width: 60vw;
+  }
+  section {
+    width: 50vw;
+  }
+  .changed_msg {
+    width: 60vw;
+  }
+  .fab.fa-twitter {
+    font-size: 1.5rem;
+  }
+  .new_quote {
+    padding: 0.5em 1em;
+  }
+}
+@media (min-width: 1400px) {
+  form {
+    width: 50vw;
+  }
+  section {
+    width: 50vw;
+  }
+  .changed_msg {
+    width: 50vw;
+  }
+  .question {
+    width: 40vw;
+  }
+  .nav_list_item {
+    padding-top: 1rem;
+  }
+  .nav_list_item ul {
+    margin: 1.5rem 1rem;
+  }
+  .nav_list_item li {
+    margin-bottom: 2rem;
+  }
+  .logo {
+    width: 20rem;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+svg {
+    display: block;
+    font: 10.5em 'Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke:#C800FF;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #FFFFFF;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #F0B9FF;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #FFFFFF;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #C800FF;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}

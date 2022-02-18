@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Sapiens</title>
+    <link rel="icon" href="favicon.png" type="image/icon type" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="main_header_content">
+      <div class="logo">
+        <div style="text-align:center;">
+          <svg viewBox="0 0 1300 300">
+            <style>
+              .t {font: "Brush Script MT";}
+            </style>
+            <symbol id="s-text">
+              <text id="t" text-anchor="middle" x="50%" y="80%">SAPIENS</text>
+            </symbol>
+
+            <g class = "g-ants">
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+              <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <p class="header_p" id="welcome">ONE WHO KNOWS...</p>
+
+      <p class="changed_msg header_p">
+        Do you need to ask a question? Are you looking for answers? Sapiens
+        offers you a space to ask anything you want. However, before each
+        question you must write a petition. If the answer is not what you
+        expected, at least you achieve catharsis so ask again.
+      </p>
+      <button id="tweetTheFortuneBtn">Tweet Your Magical Answer</button>
+      <p id="empty_p"></p>
+      <main>
+      <form action="#">
+        <div class="ptt">
+          <input type="text" id="petition" class="petition" autocomplete="off" placeholder="Petition" />
+          <div class="spn"></div>
+          <div class="underline second"></div>
+        </div>
+
+        <div class="question_two">
+          <input type="text" id="question" class="question" autocomplete = "off" placeholder="Question" />
+          <div class="underline"></div>
+          <div class="btn">
+            <i class="fas fa-angle-right"><button id="btn">SEND</button></i>
+          </div>
+        </div>
+      </form>
+
+    </main>
+    <a id="reset_btn_placeholder"></a>
+
+
+    <section>
+      <div class="classy_words">
+        <p class="classy_word_p">
+          "We are not permitted to choose the frame of our destiny. But what we put into it is ours."
+        </p>
+        <p><em class="classy_word_author">-Dag Hammarskjöld</em></p>
+        <div class="classy_words_buttons">
+          <button title="Tweet This" class="new_quote twitter">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button class="new_quote generate" title="Generate a New Quote">
+            New Quote
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
