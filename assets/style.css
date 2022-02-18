@@ -1,6 +1,6 @@
 :root {
   --main-color: #D8D8D8;
-  background-color: #E8D4FE
+  background-color: #E8D4FE;
 }
 
 body {
@@ -220,25 +220,6 @@ input:focus ~ .spn {
 input:focus::placeholder {
   color: var(--main-color);
 }
-.nav_list_item {
-  padding-top: 1rem;
-  background-color: white;
-  color: var(--main-color);
-  height: 90vh;
-}
-.nav_list_item ul {
-  list-style: none;
-  padding-inline-start: 0;
-  margin-right: 1rem;
-}
-.nav_list_item li {
-  margin-bottom: 1.5rem;
-  padding: 0.6rem;
-  border-radius: 3px;
-}
-.nav_list_item li:hover {
-  background-color: rgba(164, 0, 0, 0.2);
-}
 .overlay {
   position: absolute;
   width: 100vw;
@@ -252,7 +233,8 @@ input:focus::placeholder {
 .inp_hide {
   display: none;
 }
-.btn_plus {
+
+.reset_btn {
   transform: translateY(-25px);
   font-size: 1.5rem;
   padding: 0.5em 1.25em;
@@ -263,7 +245,7 @@ input:focus::placeholder {
   border: 2px solid black;
   margin-top: 1em;
 }
-.btn_plus:hover {
+.reset_btn:hover {
   filter: brightness(120%);
   transform: translateY(-20px);
 }
@@ -304,15 +286,6 @@ input:focus::placeholder {
   .question {
     width: 40vw;
   }
-  .nav_list_item {
-    padding-top: 1rem;
-  }
-  .nav_list_item ul {
-    margin: 1.5rem 1rem;
-  }
-  .nav_list_item li {
-    margin-bottom: 2rem;
-  }
   .logo {
     width: 20rem;
   }
@@ -347,12 +320,12 @@ svg {
 }
 
 .text-copy:nth-child(2){
-	stroke: #FFFFFF;
+	stroke: white;
 	animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-	stroke: #F0B9FF;
+	stroke: black;
 	animation-delay: -3s;
 }
 

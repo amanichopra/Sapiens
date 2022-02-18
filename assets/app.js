@@ -1,3 +1,14 @@
+// CONSTANTS
+const reset_btn = document.createElement('reset_button');
+const form = document.querySelector('form');
+const changed_msg = document.querySelector('.changed_msg');
+let classy_word_p = document.querySelector('.classy_word_p');
+let classy_word_author = document.querySelector('.classy_word_author');
+const twitter_btn = document.querySelector('.twitter');
+const generate_btn = document.querySelector('.generate');
+const proxy = 'https://fathomless-dawn-61850.herokuapp.com/';
+const api_quote = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
+
 // VARS
 var model = {
     answer: "",
@@ -5,9 +16,6 @@ var model = {
     needsReset: false,
     petitionText: "Sapiens please answer the following question."
 }
-const reset_btn = document.createElement('reset-button');
-const form = document.querySelector('form');
-const changed_msg = document.querySelector('.changed_msg');
 
 // FUNCS
 const changeParagraphFirst = () => {
@@ -19,14 +27,7 @@ const changeParagraphFirst = () => {
   welcome.textContent = content
 };
 
-let classy_word_p = document.querySelector('.classy_word_p');
-let classy_word_author = document.querySelector('.classy_word_author');
-const twitter_btn = document.querySelector('.twitter');
-const generate_btn = document.querySelector('.generate');
-const proxy = 'https://fathomless-dawn-61850.herokuapp.com/';
-const api_quote =
-  'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
-//Getting quotes from API:
+// get quote from API
 const getQuote = async () => {
   try {
     const response = await fetch(proxy + api_quote);
@@ -43,27 +44,28 @@ const getQuote = async () => {
   }
 };
 
-//Twitter Functionality:
+// func to send quote to twitter
 const tweetOfTheDay = () => {
   const quote = classy_word_p.textContent;
   const author = classy_word_author.textContent;
   const twitter = `https://twitter.com/intent/tweet?text=${quote} ${author}`;
   window.open(twitter, '_blank');
 };
-//Generate A Quote:
-generate_btn.addEventListener('click', getQuote);
-//Tweet the Quote:
 twitter_btn.addEventListener('click', tweetOfTheDay);
 
+// generate quote
+generate_btn.addEventListener('click', getQuote);
+
+// make reset button
 function createButton() {
 document.getElementsByClassName('btn')[0].style.visibility = "hidden";
-  reset_btn.classList.add('btn_plus');
+  reset_btn.classList.add('reset_btn');
   const pls = 'Reset';
   reset_btn.append(pls);
   document.getElementById('reset_btn_placeholder').appendChild(reset_btn);
-  //btn.addEventListener('click', () => {window.alert("Please reset the form.");});
 }
 
+// MAIN CONTROLLER
 var controller = {
     init: () => {
         view.init();
@@ -80,7 +82,7 @@ var controller = {
             document.getElementById('petition').value += model.petitionText[len];
             console.log(model.answer);
             return false;
-        } else if (e.key === "Backspace" && model.answerToggle) { // if its a backpace
+        } else if (e.key === "Backspace" && model.answerToggle) { // if its a backspace
             model.answer = model.answer.slice(0,-1);
         }
     },
@@ -165,6 +167,4 @@ var view = {
         return document.getElementById('petition').value;
     }
 }
-
-
 controller.init();
